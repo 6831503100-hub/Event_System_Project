@@ -1,0 +1,100 @@
+{
+  "name": "EventRequest",
+  "type": "object",
+  "properties": {
+    "event_name": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "participants": {
+      "type": "number"
+    },
+    "budget": {
+      "type": "number"
+    },
+    "theme": {
+      "type": "string"
+    },
+    "equipment": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "contact_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "reference_file_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending_review",
+        "under_review",
+        "waiting_customer_info",
+        "waiting_customer_confirmation",
+        "confirmed",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending_review"
+    },
+    "proposed_price": {
+      "type": "number"
+    },
+    "deposit": {
+      "type": "number"
+    },
+    "remaining_balance": {
+      "type": "number"
+    },
+    "admin_notes_public": {
+      "type": "string"
+    },
+    "deposit_paid": {
+      "type": "boolean",
+      "default": false
+    },
+    "deposit_slip_url": {
+      "type": "string"
+    },
+    "customer_change_request": {
+      "type": "string"
+    },
+    "organizer_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "event_name",
+    "event_type",
+    "date",
+    "location",
+    "contact_name",
+    "phone",
+    "email"
+  ]
+}

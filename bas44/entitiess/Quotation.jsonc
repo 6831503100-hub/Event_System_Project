@@ -1,0 +1,37 @@
+{
+  "name": "Quotation",
+  "type": "object",
+  "properties": {
+    "request_id": {
+      "type": "string"
+    },
+    "request_name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "deposit": {
+      "type": "number"
+    },
+    "details": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "sent",
+        "accepted",
+        "rejected"
+      ],
+      "default": "sent"
+    },
+    "issued_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "price"
+  ]
+}

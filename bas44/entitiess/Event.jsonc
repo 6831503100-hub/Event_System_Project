@@ -1,0 +1,85 @@
+{
+  "name": "Event",
+  "type": "object",
+  "properties": {
+    "name_th": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "desc_th": {
+      "type": "string"
+    },
+    "desc_en": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "tour",
+        "event"
+      ]
+    },
+    "region": {
+      "type": "string",
+      "enum": [
+        "north",
+        "central",
+        "east",
+        "west",
+        "northeast",
+        "south"
+      ]
+    },
+    "province": {
+      "type": "string"
+    },
+    "location_th": {
+      "type": "string"
+    },
+    "location_en": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "original_price": {
+      "type": "number"
+    },
+    "available_seats": {
+      "type": "number"
+    },
+    "total_seats": {
+      "type": "number"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_promotion": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "name_th",
+    "name_en",
+    "category",
+    "date",
+    "price"
+  ]
+}

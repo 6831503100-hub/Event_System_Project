@@ -1,0 +1,23 @@
+{
+  "name": "AdminNote",
+  "type": "object",
+  "properties": {
+    "request_id": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "is_internal": {
+      "type": "boolean",
+      "default": true
+    },
+    "author_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "content"
+  ]
+}
