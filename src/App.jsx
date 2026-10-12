@@ -34,6 +34,7 @@ import RequestsAdmin from '@/pages/admin/RequestsAdmin';
 import RequestDetailAdmin from '@/pages/admin/RequestDetailAdmin';
 import UsersAdmin from '@/pages/admin/UsersAdmin';
 import ContactAdmin from '@/pages/admin/ContactAdmin';
+import AdminDashboardDraft from '@/pages/admin-draft/AdminDashboard';
 // Organizer
 import OrganizerDashboard from '@/pages/OrganizerDashboard';
 import OrganizerOverview from '@/pages/organizer/OrganizerOverview';
@@ -90,6 +91,7 @@ const AuthenticatedApp = () => {
           <Route path="users" element={<UsersAdmin />} />
           <Route path="contact" element={<ContactAdmin />} />
         </Route>
+           <Route path="/admin-draft" element={<RoleRoute roles={['admin']}><AdminDashboardDraft /></RoleRoute>} />
         <Route path="/organizer" element={<RoleRoute roles={['organizer']}><OrganizerDashboard /></RoleRoute>}>
           <Route index element={<OrganizerOverview />} />
           <Route path=":id" element={<OrganizerEventDetail />} />
